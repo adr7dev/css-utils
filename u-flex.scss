@@ -90,6 +90,14 @@ $bps: (
   justify-content: unset;
 }
 
+.u-f-g-0 {
+  flex-grow: 0;
+}
+
+.u-f-g-1 {
+  flex-grow: 1;
+}
+
 @each $bpKey, $bpVal in $bps {
   @media screen and (max-width: $bpVal) {
     .u-fcc-#{$bpKey} {
@@ -173,6 +181,14 @@ $bps: (
     .u-ai-jc-unset-#{$bpKey} {
       align-items: unset;
       justify-content: unset;
+    }
+
+    .u-f-g-0-#{$bpKey} {
+      flex-grow: 0;
+    }
+
+    .u-f-g-1-#{$bpKey} {
+      flex-grow: 1;
     }
   }
 }
