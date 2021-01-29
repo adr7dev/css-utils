@@ -77,6 +77,19 @@ $bps: (
   justify-content: stretch;
 }
 
+.u-ai-unset {
+  align-items: unset;
+}
+
+.u-jc-unset {
+  justify-content: unset;
+}
+
+.u-ai-jc-unset {
+  align-items: unset;
+  justify-content: unset;
+}
+
 @each $bpKey, $bpVal in $bps {
   @media screen and (max-width: $bpVal) {
     .u-fcc-#{$bpKey} {
@@ -147,6 +160,19 @@ $bps: (
 
     .u-jc-s-#{$bpKey} {
       justify-content: stretch;
+    }
+
+    .u-ai-unset-#{$bpKey} {
+      align-items: unset;
+    }
+
+    .u-jc-unset-#{$bpKey} {
+      justify-content: unset;
+    }
+
+    .u-ai-jc-unset-#{$bpKey} {
+      align-items: unset;
+      justify-content: unset;
     }
   }
 }

@@ -1,0 +1,52 @@
+$bps: (
+  'xl': 1500px,
+  'lg': 1200px,
+  'md': 992px,
+  'sm': 768px,
+  'xs': 576px,
+  'xxs': 360px,
+);
+
+.u-d-none {
+  display: none;
+}
+
+.u-d-bl {
+  display: block;
+}
+
+.u-d-in {
+  display: inline;
+}
+
+.u-d-inbl {
+  display: inline-block;
+}
+
+.u-d-infl {
+  display: inline-flex;
+}
+
+@each $bpKey, $bpVal in $bps {
+  @media screen and (max-width: $bpVal) {
+    .u-d-none-#{$bpKey} {
+      display: none;
+    }
+
+    .u-d-bl-#{$bpKey} {
+      display: block;
+    }
+
+    .u-d-in-#{$bpKey} {
+      display: inline;
+    }
+
+    .u-d-inbl-#{$bpKey} {
+      display: inline-block;
+    }
+
+    .u-d-infl-#{$bpKey} {
+      display: inline-flex;
+    }
+  }
+}
