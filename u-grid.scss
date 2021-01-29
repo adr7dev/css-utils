@@ -1,0 +1,64 @@
+$cols: 1, 2, 3, 4, 5, 6, 7, 8;
+$gaps: 8, 10, 12, 16, 20, 24, 30, 32, 36, 48;
+
+$bps: (
+  'xl': 1500px,
+  'lg': 1200px,
+  'md': 992px,
+  'sm': 768px,
+  'xs': 576px,
+  'xxs': 360px,
+);
+
+@each $col in $cols {
+  .u-gr-#{$col} {
+    display: grid;
+    grid-template-columns: repeat(#{$col}, 1fr);
+  }
+}
+
+.u-gr-af {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.u-gr-caf {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--u-gr-caf), 1fr));
+}
+
+@each $gap in $gaps {
+  .u-gg-#{$gap} {
+    gap: #{$gap}px;
+  }
+}
+
+@each $bpKey, $bpVal in $bps {
+  @media screen and (max-width: $bpVal) {
+    @each $col in $cols {
+      .u-gr-#{$col}-#{$bpKey} {
+        display: grid;
+        grid-template-columns: repeat(#{$col}, 1fr);
+      }
+    }
+
+    @each $gap in $gaps {
+      .u-gg-#{$gap}-#{$bpKey} {
+        gap: #{$gap}px;
+      }
+    }
+
+    .u-gr-af-#{$bpKey} {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+
+    .u-gr-caf-#{$bpKey} {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(var(--u-gr-caf-#{$bpKey}), 1fr)
+      );
+    }
+  }
+}
