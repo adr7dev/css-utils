@@ -26,15 +26,15 @@ $bps: (
     margin-bottom: #{$size}px;
   }
 
-  // .u-mx-#{$size} {
-  //   margin-left: #{$size}px;
-  //   margin-right: #{$size}px;
-  // }
+  .u-mx-#{$size} {
+    margin-left: #{$size}px;
+    margin-right: #{$size}px;
+  }
 
-  // .u-my-#{$size} {
-  //   margin-top: #{$size}px;
-  //   margin-bottom: #{$size}px;
-  // }
+  .u-my-#{$size} {
+    margin-top: #{$size}px;
+    margin-bottom: #{$size}px;
+  }
 }
 
 @each $bpKey, $bpVal in $bps {
@@ -56,15 +56,15 @@ $bps: (
         margin-bottom: #{$size}px;
       }
 
-      // .u-mx-#{$size}-#{$bpKey} {
-      //   margin-left: #{$size}px;
-      //   margin-right: #{$size}px;
-      // }
+      .u-mx-#{$size}-#{$bpKey} {
+        margin-left: #{$size}px;
+        margin-right: #{$size}px;
+      }
 
-      // .u-my-#{$size}-#{$bpKey} {
-      //   margin-top: #{$size}px;
-      //   margin-bottom: #{$size}px;
-      // }
+      .u-my-#{$size}-#{$bpKey} {
+        margin-top: #{$size}px;
+        margin-bottom: #{$size}px;
+      }
     }
   }
 }
